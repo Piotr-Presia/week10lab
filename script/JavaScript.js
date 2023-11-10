@@ -1,4 +1,9 @@
 
+//---------------------QUESTION 1 -------------------------------
+
+
+
+
 //---------------------QUESTION 2 -------------------------------
 function q2() {
     var winner = "";
@@ -11,8 +16,6 @@ function q2() {
     var compArray = [];
     var v = "";
     var winArray = [];
-
-    document.getElementById("plc").innerHTML = "";
 
     while (c2 < 5) {
         input();
@@ -88,8 +91,8 @@ function q2() {
 
         } else {
 
-            document.getElementById("plc").innerHTML = "WRONG ENTRY, TRY AGAIN";
-
+            userP = document.getElementById("plc").innerHTML = "WRONG ENTRY, TRY AGAIN";
+            winner = "";
         }
     }
 

@@ -34,3 +34,7 @@ input {
     padding: 1%;
     font-size: 1.5em;
 }
+
+h2 {
+    font-style: italic;
+}
