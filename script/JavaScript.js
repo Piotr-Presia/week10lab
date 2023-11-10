@@ -1,6 +1,43 @@
 
 //---------------------QUESTION 1 -------------------------------
+function q1() {
 
+    var sub = parseInt(prompt("Enter number of subjects"));
+    var resultSubjects = [];
+    var sum = 0;
+    var average = 0;
+    var v = "";
+
+    for (i = 0; i < sub; i++) {
+        resultSubjects[i] = parseInt(prompt("Enter result for Subject " + (i + 1) + " (from 0 to 100%)"));
+        sum = sum + resultSubjects[i];
+        v = v + "<br> + Subject " + (i + 1) + " result: " + resultSubjects[i] + "% " + " Grade: " + q1a(resultSubjects[i]);
+    }
+    average = parseInt((sum / sub));
+
+    document.getElementById("a1").innerHTML = v;
+    document.getElementById("average").innerHTML = "Overall average is: " + average + "% " + " Grade: " + q1a(average);
+
+    function q1a(result) {
+
+        if (result > 80 && result <= 100) {
+            return " A";
+        } else if (result <= 80 && result > 70) {
+            return " B";
+        } else if (result <= 70 && result > 60) {
+            return " C";
+        } else if (result <= 60 && result > 50) {
+            return " D";
+        } else if (result <= 50 && result > 40) {
+            return " E";
+        } else if (result <= 40 && result >= 0) {
+            return " F";
+        } else {
+            return " Invalid Number";
+        }
+    }
+
+}
 
 
 
@@ -162,4 +199,22 @@ function q5() {
     document.getElementById("mean5").innerHTML = "The MEAN is: " + q5b();
     document.getElementById("t1").innerHTML = "The pre-set Array";
     document.getElementById("a5").innerHTML = myArray;
+}
+
+//---------------------QUESTION 6 -------------------------------
+function q6() {
+
+    var groveryList = ["Butter", "Milk", "Bread"];
+
+    document.getElementById("pop").innerHTML = groveryList.pop();
+    document.getElementById("a6").innerHTML = "My up-to-date Grocery List <br>" + "<ul>" + groveryList + "</ul>";
+
+    function pop1() {
+        document.getElementById("pop1").innerHTML = groveryList.pop();
+        document.getElementById("a6").innerHTML = groveryList;
+    }
+
+
+
+
 }
