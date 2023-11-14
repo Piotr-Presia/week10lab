@@ -12,31 +12,40 @@
 <body>
     <h1>Lab 10</h1>
     <hr>
+    <p>Below are answers for all questions for LAB 10. As the main subject of the Lab is about JavaScript, the
+        presentation was kept to minimum. <br>
+        A user Validation input is not checked as it was not a requirement for the lab.</p>
+
+    <!--    ######         Question 1                                               -->
+
     <h2>Question 1</h2>
     <hr>
-    <p>Create an application that asks a user to enter how many subjects they have. The application should then ask the
+    <p class="question">Create an application that asks a user to enter how many subjects they have. The application
+        should then ask the
         user to enter the results for each subject. Store these results in an array and print them back to the user
-        along
-        with their overall average and grade for each module.</p>
+        along with their overall average and grade for each module.</p>
 
     <h2>ANSWER</h2>
-    <button onclick="q1()">Results</button>
+
+    <button type="button" onclick="q1()">Results</button>
 
     <h5>An array with all subjects and grades.</h5>
     <h5 id="a1">Click the button above to enter</h5>
     <h5 id="average">a number of subjects and grades</h5>
-
-
 
     <!--    ######         Question 2                                               -->
 
     <hr>
     <h2>Question 2</h2>
     <hr>
-    <p>Alter the Rock Paper Scissors application to run 5 times, so that the following occurs:
-
+    <p class="question">Alter the Rock Paper Scissors application to run 5 times, so that the following occurs:
         Store the user guesses and return them to the user when they finish or win.</p>
+
     <h2>ANSWER</h2>
+
+    <p>The game runs for 5 times and displays the results, unless the Player wins, then the results are displayed
+        immediately and the game stops.</p>
+
     <button onclick="q2()">Play the Game</button>
 
     <h5>An Array with all player's and computer choices</h5>
@@ -46,18 +55,13 @@
     <hr>
     <h2>Question 3</h2>
     <hr>
-    <p>Create an application that generates an array of 5 random numbers 1-10. The user should then guess a number
-        and
-        the
-        app will tell them how many time that number exists within the array.</p>
+    <p class="question">Create an application that generates an array of 5 random numbers 1-10. The user should then
+        guess a number and the app will tell them how many time that number exists within the array.</p>
 
     <h2>ANSWER</h2>
 
-
-
-    <label for="numberToCheck">Enter a number to check in the random Array:</label>
+    <label for="numberToCheck">Enter a number (1 to 10) to check in the random Array:</label>
     <input type="number" id="numberToCheck" value="1" min="1" max="10">
-
 
     <br>
     <button onclick="q3()">check the number</button>
@@ -67,10 +71,12 @@
     <h3 id="a3">RUN ME!</h3>
 
     <!--    ######          Question 4                                               -->
+
     <hr>
     <h2>Question 4</h2>
     <hr>
-    <p>Create a preset array of numbers. Create a piece of code that chooses the largest number from that array</p>
+    <p class="question">Create a preset array of numbers. Create a piece of code that chooses the largest number from
+        that array</p>
 
     <h2>ANSWER</h2>
 
@@ -80,54 +86,48 @@
     <h3 id="t4">To find the largest number</h3>
     <h3 id="a4">in a Preset Array</h3>
 
-
     <!--    ######          Question 5                                              -->
+
     <hr>
     <h2>Question 5</h2>
     <hr>
-    <p>Return the mean and sum of an array of numbers</p>
+    <p class="question">Return the mean and sum of an array of numbers</p>
 
     <h2>ANSWER</h2>
-    <div>
-        <h3>Sum and Mean of a pre-set Array</h3>
-        <button onclick="q5()">Click ME!</button>
-        <h3 id="sum5">Click the Button above </h3>
-        <h3 id="mean5">To get SUM and MEAN in a pre-set Array</h3>
-        <h3 id="t1">the sum and mean are </h3>
-        <h3 id="a5">get using 'return' keyword</h3>
 
-
-    </div>
+    <h3>Sum and Mean of a pre-set Array</h3>
+    <button onclick="q5()">Click ME!</button>
+    <h3 id="sum5">Click the Button above </h3>
+    <h3 id="mean5">To get SUM and MEAN of the pre-set Array</h3>
+    <h3 id="t1">the sum and mean are </h3>
+    <h3 id="a5">got using 'return' keyword</h3>
 
     <!--    ######          Question 6                                              -->
     <hr>
     <h2>Question 6</h2>
     <hr>
-    <p>Create a grocery list application where users can add and remove items from a list. The list should be
-        displayed
-        as
-        a bulleted unordered list</p>
+    <p class="question">Create a grocery list application where users can add and remove items from a list. The list
+        should be displayed as a bulleted unordered list</p>
 
+    <h2>ANSWER</h2>
+
+    <p>The list has 3 pre-set elements for better illustration of the application.</p>
     <button onclick="removeLastElement()">Remove the last element</button>
     <button onclick="addLastElement()">Add to the end of the list</button>
     <button onclick="addFirstElement()">Add an element to the front of the list</button>
     <button onclick="removeFirstElement()">Remove an element from the front of the list</button>
 
-    <h3 id="q6p">Pre-set array with 3 items is set</h3>
-    <h3 id="a6">Use buttons to add and remove items</h3>
+    <h3 id="q6p">A pre-set array with 3 items is set</h3>
+    <h3 id="a6">Use buttons to add and remove items<br><br>The Grocery List</h3>
 
-<ul id="listUL">   </ul>
-    
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <ul id="listUL">
+        <li>Butter</li>
+        <li>Milk</li>
+        <li>Bread</li>
+
+    </ul>
+
+    <br><br><br><br><br><br><br><br><br>
 </body>
 
 </html>
-

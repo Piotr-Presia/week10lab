@@ -8,15 +8,22 @@ function q1() {
     var average = 0;
     var v = "";
 
-    for (i = 0; i < sub; i++) {
-        resultSubjects[i] = parseInt(prompt("Enter result for Subject " + (i + 1) + " (from 0 to 100%)"));
-        sum = sum + resultSubjects[i];
-        v = v + "<br> + Subject " + (i + 1) + " result: " + resultSubjects[i] + "% " + " Grade: " + q1a(resultSubjects[i]);
-    }
-    average = parseInt((sum / sub));
+    if (sub > 0 && sub < 100) {
 
+
+        for (i = 0; i < sub; i++) {
+            resultSubjects[i] = parseInt(prompt("Enter result for Subject " + (i + 1) + " (from 0 to 100%)"));
+            sum = sum + resultSubjects[i];
+            v = v + "<br> - Subject " + (i + 1) + " result: " + resultSubjects[i] + "% " + " Grade: " + q1a(resultSubjects[i]);
+
+            average = parseInt((sum / sub));
+        }
+    } else {
+        v = "Wrong input.";
+        average = "Wrong Data";
+    }
     document.getElementById("a1").innerHTML = v;
-    document.getElementById("average").innerHTML = "Overall average is: " + average + "% " + " Grade: " + q1a(average);
+    document.getElementById("average").innerHTML = "Overall average result is: " + average + "% " + " Grade: " + q1a(average);
 
     function q1a(result) {
 
@@ -128,7 +135,7 @@ function q2() {
 
         } else {
 
-            userP = document.getElementById("plc").innerHTML = "WRONG ENTRY, TRY AGAIN";
+            userP = "WRONG ENTRY, TRY AGAIN";
             winner = "";
         }
     }
@@ -171,7 +178,7 @@ function q4() {
         }
     }
     document.getElementById("lnum4").innerHTML = "is: " + myNumber;
-    document.getElementById("t4").innerHTML = "A Pre-set Array";
+    document.getElementById("t4").innerHTML = "The Pre-set Array";
     document.getElementById("a4").innerHTML = myArray;
 
 }
@@ -206,40 +213,34 @@ function q5() {
 {
 
     var groveryList = ["Butter", "Milk", "Bread"];
-    
-    function printUpToDateList() {
-        
-        
-        //document.getElementById("a6").innerHTML = groveryList.toString();
-        //var ul = document.createElement("ul"); // Create a <ul> element
-    //for (var i = 0; i < groveryList.length; i++) {
-        //var li = document.createElement("li"); // Create a <li> element for each item
-       // li.textContent = groveryList[i]; // Set the text content of the <li> element
-    //'' ul.appendChild(li); // Append the <li> element to the <ul> element
-    //}
-    //document.body.appendChild(ul); // Append the <ul> element to the document body
-        var list = "";
-        if (groveryList[0] == null) {
-            list = "<li></li>";
 
-        } else {
+    function printUpList() {
+
+        var list = "";
+        if (groveryList[0] != null) {
+
             for (i = 0; i < groveryList.length; i++) {
                 list = list + "<li>" + groveryList[i] + "</li>";
+
             }
-            
         }
-        //document.getElementById("listUL").innerHTML = groveryList.toString();
+
+        if (groveryList.length == 0) {
+            list = "";
+
+        }
         document.getElementById("listUL").innerHTML = list;
     }
 
     function removeLastElement() {
-        var rem = groveryList.pop();
-        document.getElementById("q6p").innerHTML = "Removed from the list: " + rem;
-        if (groveryList[0] == null) {
+
+        if (groveryList.length == 0) {
             document.getElementById("q6p").innerHTML = "There is nothing to remove";
-            document.getElementById("a6").innerHTML = "No groceries on the list";
+            //document.getElementById("a6").innerHTML = "No groceries on the list";
         } else {
-            printUpToDateList()
+            var rem = groveryList.pop();
+            document.getElementById("q6p").innerHTML = "Removed from the list: " + rem;
+            printUpList();
         }
     }
 
@@ -248,32 +249,34 @@ function q5() {
         groveryList.push(rem);
         document.getElementById("q6p").innerHTML = "Added to the list: " + rem;
 
-        printUpToDateList()
+        printUpList();
 
     }
 
     function removeFirstElement() {
-        var rem = groveryList.shift();
-        document.getElementById("q6p").innerHTML = "Removed from the list: " + rem;
+
+
         if (groveryList[0] == null) {
             document.getElementById("q6p").innerHTML = "There is nothing to remove";
-            document.getElementById("a6").innerHTML = "No groceries on the list";
+            //document.getElementById("a6").innerHTML = "No groceries on the list";
         } else {
-            printUpToDateList()
+            var rem = groveryList.shift();
+            document.getElementById("q6p").innerHTML = "Removed from the list: " + rem;
+            printUpList();
         }
     }
 
     function addFirstElement() {
         var rem = prompt("Enter an element to add to the front of the list")
         groveryList.unshift(rem);
-        
+
         document.getElementById("q6p").innerHTML = "Added to the list: " + rem;
 
-        printUpToDateList()
+        printUpList();
 
     }
 
 
-    
+
 
 }
